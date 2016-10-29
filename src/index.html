@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nicholas Nezamis | Electrical Engineer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet"  href="http://andymatthews.net/code/jQuery-Mobile-Icon-Pack/dist/jqm-icon-pack-fa.css">
+		<style>
+			.under-construction {
+				color: red;
+				
+			}
+			#militaryExperience, #home {
+				margin: 1em;
+			}
+		</style>
+	</head>
+	<body>
+		<div data-role="page" id="home" data-theme="b">
+			<div data-role="header" data-position="fixed">
+				<h1>
+					Nicholas Nezamis
+				</h1>
+				<nav data-role="navbar">
+					<ul>
+						<li>
+							<a href="#home">Home</a>
+						</li>
+						<li>
+							<a href="#militaryExperience">Military Experience</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div data-role="main" clstuy"ui-content">
+				<h1>About Me</h1>
+				<img style="text-align: center; border: .2em solid white; border-radius: .7em; width: 50%; height: 50%;" src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/580845_335442086546829_120355955_n.jpg?oh=3d9f05dafa0fe864ba5afb9a72633759&oe=588DCFE7">
+				<p>
+					I am currently an Electrical Engineering Senior at 
+					Southern Illinois University - Carbondale who is involved in:
+				</p>
+				<ul>
+					<li>
+						Formula SAE
+					</li>
+					<li>
+						Boeing Robotics Competition (Senior Design Project)
+					</li>
+					<li>
+						Saluki Code
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-id="main-footer" data-position="fixed">
+				<h3>
+					<div class="ui-grid-b">
+						<div class="ui-block-a" style="text-align: left;"><a target="_new" href="https://github.com/nickJN" data-role="button" data-icon="github-alt">Github</a></div>
+						<div class="ui-block-b" style="text-align: center;"><a target="_new" href="https://www.linkedin.com/in/nicholas-nezamis-ab2613119" data-role="button" data-icon="linkedin">Linkedin</a></div>
+						<div class="ui-block-c" style="text-align: right;"><a href="#home" data-role="button" data-icon="home">Home</a></div>
+					</div>
+				</h3>   
+			</div>
+		</div>
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		<!-- 		Military Experience Section		 -->
+		
+		
+		
+		
+		
+		<div data-role="page" id="militaryExperience" data-theme="b">
+			<div data-role="header" data-position="fixed">
+				<h1>
+					Nicholas Nezamis
+				</h1>
+				<nav data-role="navbar">
+					<ul>
+						<li>
+							<a href="#home">Home</a>
+						</li>
+						<li>
+							<a href="#militaryExperience">Military Experience</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div data-role="main" class="ui-content">
+				<h1>Military Experience</h1>
+				<p>
+					I joined the National Guard in 2012, and, since then, I've been stationed in several locations and countries.
+				</p>
+				<div data-role="collapsibleset">
+					<div data-role="collapsible">
+						<h1>
+							England
+						</h1>
+						<div class="projects">
+							<p>
+								RAF Mildenhall
+							</p>
+						</div>
+					</div>
+					<div data-role="collapsible">
+						<h1>
+							U.S.A.
+						</h1>
+						<div class="projects">
+							<p>
+								Scott Airforce Base
+							</p>
+						</div>
+					</div>
+					<div data-role="collapsible">
+						<h1>
+							Qatar
+						</h1>
+						<div class="projects">
+							<p>
+								Al Udeid
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div data-role="footer" data-id="main-footer" data-position="fixed">
+				<h3>
+					<div class="ui-grid-b">
+						<div class="ui-block-a" style="text-align: left;"><a target="_new" href="https://github.com/KaneRodriguez" data-role="button" data-icon="github-alt">Github</a></div>
+						<div class="ui-block-b" style="text-align: center;"><a target="_new" href="https://www.linkedin.com/in/kane-rodriguez-a8a50ba1" data-role="button" data-icon="linkedin">Linkedin</a></div>
+						<div class="ui-block-c" style="text-align: right;"><a href="#home" data-role="button" data-icon="home">Home</a></div>
+					</div>
+				</h3>   
+			</div>
+		</div>
+		
+	
+		
+		<!-- 		End Page Sections		-->		
+		
+		
+		
+		
+		<!-- 		Start JavaScript/jQuery		-->		
+		
+		
+		<script>
+			
+			/*			Handle Error Messages		*/
+			
+			$( document ).ready(function() {
+				$('.under-construction').html('<h2><em>This Page is Currently Under Construction. Apologies for the Inconvenience.</em></h2>');
+			});
+			
+			/*			End Handle Error Messages	*/
+			
+			
+			
+			/* 			Sticky Nav to Top			 */
+			
+			
+			/* 			End Sticky Nav to Top			 */
+			
+			
+			
+			
+			/* 					Page Swipes						 */
+			
+			$(document).on('swipeleft', '.ui-page', function(event){    
+				if(event.handled !== true) // This will prevent event triggering more then once
+				{    
+					var nextpage = $.mobile.activePage.next('[data-role="page"]');
+					// swipe using id of next page if exists
+					if (nextpage.length > 0) {
+						$.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+					}
+					event.handled = true;
+				}
+				return false;         
+			});
+			
+			$(document).on('swiperight', '.ui-page', function(event){     
+				if(event.handled !== true) // This will prevent event triggering more then once
+				{      
+					var prevpage = $(this).prev('[data-role="page"]');
+					if (prevpage.length > 0) {
+						$.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+					}
+					event.handled = true;
+				}
+				return false;            
+			});
+			
+			/* 				End Page Swipes 				*/
+			
+			
+			
+			
+	
+			
+			
+			
+		</script>
+		
+	</body>
+</html>
+					
